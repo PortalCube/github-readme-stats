@@ -36,7 +36,7 @@ exports[`Test Render Wakatime Card should render correctly with compact layout 1
     }
     .stagger {
       opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
+      animation: SlideInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
       font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58;
@@ -222,7 +222,7 @@ exports[`Test Render Wakatime Card should render correctly with compact layout w
     }
     .stagger {
       opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
+      animation: SlideInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
       font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58;

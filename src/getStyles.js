@@ -54,10 +54,19 @@ const getAnimations = () => {
     @keyframes fadeInAnimation {
       from {
         opacity: 0;
-        transform: translateX(0px);
       }
       to {
         opacity: 1;
+      }
+    }
+    @keyframes SlideInAnimation {
+      from {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(25px);
       }
     }
   `;
@@ -97,11 +106,11 @@ const getStyles = ({
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:12px; }
+      .stat { font-size:14px; }
     }
     .stagger {
       opacity: 0;
-      animation: fadeInAnimation 0.5s ease-out forwards;
+      animation: SlideInAnimation 0.5s ease-out forwards;
     }
     .rank-text {
       font: 800 24px 'SUITE', 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor};
