@@ -54,6 +54,7 @@ const getAnimations = () => {
     @keyframes fadeInAnimation {
       from {
         opacity: 0;
+        transform: translateX(0px);
       }
       to {
         opacity: 1;
@@ -83,8 +84,14 @@ const getStyles = ({
   progress,
 }) => {
   return `
+    @font-face {
+      font-family: 'SUITE';
+      font-weight: 400;
+      src: local('SUITE Regular'), url('https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE-Regular.woff2') format('woff2');
+    }
+
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 14px 'SUITE', 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -92,11 +99,11 @@ const getStyles = ({
     }
     .stagger {
       opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
+      animation: fadeInAnimation 0.5s ease-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor};
-      animation: scaleInAnimation 0.3s ease-in-out forwards;
+      font: 800 24px 'SUITE', 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor};
+      animation: scaleInAnimation 0.5s ease-out forwards;
     }
     .rank-percentile-header {
       font-size: 14px;
@@ -115,19 +122,19 @@ const getStyles = ({
     .rank-circle-rim {
       stroke: ${ringColor};
       fill: none;
-      stroke-width: 6;
+      stroke-width: 8;
       opacity: 0.2;
     }
     .rank-circle {
       stroke: ${ringColor};
       stroke-dasharray: 250;
       fill: none;
-      stroke-width: 6;
+      stroke-width: 8;
       stroke-linecap: round;
       opacity: 0.8;
       transform-origin: -10px 8px;
       transform: rotate(-90deg);
-      animation: rankAnimation 1s forwards ease-in-out;
+      animation: rankAnimation 1.5s forwards ease-out;
     }
     ${process.env.NODE_ENV === "test" ? "" : getProgressAnimation({ progress })}
   `;

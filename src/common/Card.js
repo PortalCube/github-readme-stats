@@ -169,13 +169,22 @@ class Card {
         role="img"
         aria-labelledby="descId"
       >
+        <defs>
+          <pattern id="background" patternUnits="userSpaceOnUse"  width="${
+            this.width
+          }" height="${this.height}">
+            <image href="themes/background.jpg" preserveAspectRatio="xMidYMid slice" x="0" y="0" width="${
+              this.width
+            }" height="${this.height + 90}" />
+          </pattern>
+        </defs>
         <title id="titleId">${this.a11yTitle}</title>
         <desc id="descId">${this.a11yDesc}</desc>
         <style>
           .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 18px 'SUITE', 'Segoe UI', Ubuntu, Sans-Serif;
             fill: ${this.colors.titleColor};
-            animation: fadeInAnimation 0.8s ease-in-out forwards;
+            animation: fadeInAnimation 0.5s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
             /* Selector detects Firefox */
@@ -202,9 +211,10 @@ class Card {
           stroke="${this.colors.borderColor}"
           width="${this.width - 1}"
           fill="${
-            typeof this.colors.bgColor === "object"
-              ? "url(#gradient)"
-              : this.colors.bgColor
+            "url(#background)"
+            // typeof this.colors.bgColor === "object"
+            //   ? "url(#gradient)"
+            //   : this.colors.bgColor
           }"
           stroke-opacity="${this.hideBorder ? 0 : 1}"
         />
