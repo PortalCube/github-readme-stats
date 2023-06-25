@@ -87,7 +87,7 @@ const getStyles = ({
     @font-face {
       font-family: 'SUITE';
       font-weight: 400;
-      src: local('SUITE Regular'), url('https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE-Regular.woff2') format('woff2');
+      src: local('SUITE Regular'), url('https://user-images.githubusercontent.com/35104213/248577910-8995cdca-b254-46cc-85e4-bffb2e6eae07.png') format('woff2');
     }
 
     .stat {
