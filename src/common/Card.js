@@ -173,7 +173,7 @@ class Card {
           <pattern id="background" patternUnits="userSpaceOnUse"  width="${
             this.width
           }" height="${this.height}">
-            <image href="themes/background.jpg" preserveAspectRatio="xMidYMid slice" x="0" y="0" width="${
+            <image href="https://git-readme.portalcu.be/themes/background.jpg" preserveAspectRatio="xMidYMid slice" x="0" y="0" width="${
               this.width
             }" height="${this.height + 90}" />
           </pattern>
